@@ -1,0 +1,86 @@
+//COLLECTION(root interface)-> is a group of object(not fixed in size/Growable)
+
+//collection framework->is a group of classes and interfaces               //by which we represent group of object into single entity
+
+// COLLECTIONS (class) ->java.util.package (provides methods to perform on collection object ex:sorting)
+                       
+                       ->collections class provides method to sorting
+                       ex: collections.sort(obj_ref);  collections.sort(obj_ref , collections.reverseOrder());   collections.shuffle(obj_ref)
+
+
+
+collection(interface)->parent interface
+
+List(I)    Set(I)    Queue(I)   -> child interface (of collection)
+
+
+
+
+List(I)  usage -> insertion order should be preserved and maintained 
+               -> Duplicate value are allowed
+               -> NULL VALUES are allowed
+List(I)-> 
+          CLASSES -> ARRAY LIST (C)                                  LINKED LIST (C)  +Adds(Dqueue(i)methods)            VECTOR (C) (Legacy class used from old days of java)
+  USE:       *frequently doing DATA RETRIVING OPERATIONS           *frequently used with INSERTION and DELETION
+                                                                   *prefered to develope STACK and QUEUE
+  DONT:      while insertion and deletion                         it checks each node becoz each node has next value
+             it will take time in SHIFTING                        time consumption in retriving data is long                           
+               
+          
+Set(I)->  usage -> insertion order is random(NOT PRESERVED AND MAINTAINED)  [NO INDEX CONCEPT IN SET]
+                -> Duplicate values are (NOT ALLOWED)
+                -> Hash Code concept(while adding elements in hashset) [search for a element is much faster becoz of hashcode]
+                -> allows NULL values
+                -> supports Heterogenius datatypes(different types of data) 
+                -> intial capacity value is (16)  load factor value is (0.75)  for both hashset & linked hashset
+Set(I)->  
+         CLASSES ->  HASH SET (C)                                      LINKED HASHSET (C)                                                        TreeSet
+USE:            * frequently used in SEARCHING OPERATIONS               *(DATASTRUCTURE FOLLOWS -> hashtable+linkedlist                         *doesn't allow null value
+                  searching of element is faster becoz of HASHCODE       (bcoz of following linkedlist (insertion order is preserved)           *insertion order ascending
+note:        *No index concept in set(  no proper order insertion)        note: Duplicate values not allowed   ** INSERTION ORDER IS PRESERVED  *no duplicate values             
+                
+Queue(I)-> usage -> [insertion order is preserved]
+                 -> Duplicate values are allowed in both classes
+                 
+
+ (FIFO ->first in first out) (priority)   //  not important (STACK -FILO->first in last out)             
+ 
+ Queue(I)-> (PARENT INTERFACE)  ->        (CHILD INTERFACE) ->     [DEQUEUE (i) ]       -> [BLOCKING QUEUE (i) ]         -> [BLOCKING DQUEUE (i) ]
+ 
+          CLASSES ->  PRIORITY QUEUE [C]                 -> LINKEDLIST [C]                        NOTE: linked list class can use both interface methods of [LIST & QUEUE]
+                 [Homogeneous only allowed                  [hetrogenous datatyped allowed]
+           [only homogenous datatype(integer/string)         Any datatype can be used           /   
+      ( heterogenous(any datatype is NOT ALLOWED )] 
+      
+      
+  COMMON  usage:             [insertion order is preserved]
+                          -> Duplicate values are allowed in both classes
+                          
+                         [ 6 METHODS ] can be used in queue interface & (linkedlist (c) / priority queue (c))
+                          
+          
+          
+          INDEPENDENT INTERFACE (COMES UNDER COLLECTION FRAME WORK  [BUT]  NOT RELATED TO COLLECTION (INTERFACE))
+          
+          	MAP (interface)
+          	
+Map(I)->
+         CLASSES ->  HASH MAP(C)                       LINKED HASH MAP(C)              HASH TABLE(C)        
+          	
+    usage ->    to store data in form of key and values   [ex.101, david] [key,value]
+          
+          note: keys cannot be duplicate (unique-keys)
+              : values can be duplicate  (duplicate-values are allowed)
+          
+                         
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
